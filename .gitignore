@@ -1,0 +1,9 @@
+echo __pyc__
+*.pyc
+venv
+/venv
+TODO
+TODO.txt
+
+
+media/images
