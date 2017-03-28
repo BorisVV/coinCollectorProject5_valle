@@ -1,7 +1,7 @@
 echo __pyc__
 *.pyc
 venv
-/venv
+venv/
 TODO
 TODO.txt
 
