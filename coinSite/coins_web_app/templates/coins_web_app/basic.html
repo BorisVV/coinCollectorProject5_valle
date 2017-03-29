@@ -1,0 +1,9 @@
+{% extends "coins_web_app/header.html" %}
+
+{% block content %}
+
+	{% for c in displayInfo  %}
+		<p>{{c}}</p>
+	{% endfor %}
+
+{% endblock %}

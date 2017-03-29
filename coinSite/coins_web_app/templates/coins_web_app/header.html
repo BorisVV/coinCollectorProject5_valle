@@ -5,7 +5,7 @@
 		<title>CoinCollectorApp_Proj5</title>
 		<meta charset="utf-8" />
 		{% load staticfiles %}
-		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css"/>
+		<link rel="stylesheet" href="{% static 'coins_web_app/css/bootstrap.min.css' %}" type="text/css"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<style type="text/css">
@@ -14,54 +14,40 @@
 				height:100%
 			}
 
-			table {
-				border-collapse: collapse;
-			}
-			table, th, td {
-				border: 1px solid black;
-			}
-			th {
-				text-align: left;
-			}
 		</style>
 
 	</head>
 
 	<body class="body" style="background-color:#f6f6f6">
+		<div class="container-fluid" style="min-height:95%; ">
+			<div class="row">
+				<div class="col-sm-2">
+					<br>
+					<center>
+						<img src="{% static 'coins_web_app/img/delaware1987.jpg' %}" class="img-responsive" style="max-height:100px;" alt="face">
+					</center>
+			</div><hr>
+			<div class="row">
+				<div class="col-sm-2">
+				<br>
 
-		<! -- sample table to test the code -->
-		<table>
-		    <tr>
-			    <th>Firstname</th>
-			    <th>Lastname</th>
-			    <th>Savings</th>
-			 </tr>
-			 <tr>
-			    <td>Peter</td>
-			    <td>Griffin</td>
-			    <td>$100</td>
-			  </tr>
-			  <tr>
-			    <td>Lois</td>
-			    <td>Griffin</td>
-			    <td>$150</td>
-			  </tr>
-			  <tr>
-			    <td>Joe</td>
-			    <td>Swanson</td>
-			    <td>$300</td>
-			  </tr>
-			  <tr>
-			    <td>Cleveland</td>
-			    <td>Brown</td>
-			    <td>$250</td>
-			</tr>
-		</table>
+				<br>
+					<div class="well bs-sidebar" id="sidebar" style="background-color:#fff"
+						<ul class="nav nav-pills nav-stacked">
+							<li><a href="/displayInfo">Display info</a></li>
+							<li><a href="/">Main Page</a></li>
+						</ul>
+					</div>
+				</div>
 
-		<div class="container-fluid">
-			<br></br>
-			{% block content %}
-			{% endblock %}
+				<div class="col-sm-10"
+					<div class="container-fluid">
+						<br><br>
+						{% block content %}
+						{% endblock %}
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

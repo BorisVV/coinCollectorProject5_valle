@@ -4,3 +4,6 @@ from django.http import HttpResponse
 
 def index(request):
     return render(request, "coins_web_app/home.html")
+
+def displayInfo(request):
+    return render(request, "coins_web_app/basic.html", {'displayInfo': ['for this I can say that','and that is all I have to say']})
