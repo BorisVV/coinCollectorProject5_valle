@@ -1,4 +1,4 @@
-from django.conf.urls import url # patternsas
+from django.conf.urls import url, include # patterns
 from . import views # local file
 
 urlpatterns = [
