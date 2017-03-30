@@ -1,8 +1,14 @@
 """
 Create a virtual enviroment (venv)
 
-pip install django
+install django
 
 install bootstrap
+
+install beautifulSoup4
+
+install requests
+
+install pillow (not sure if it will be needed)
 
 """

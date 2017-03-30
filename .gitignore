@@ -1,6 +1,5 @@
 echo __pyc__
 *.pyc
-venv
 venv/
 TODO
 TODO.txt
@@ -11,3 +10,4 @@ img/
 media/images/
 *.db
 *csv
+*img/
