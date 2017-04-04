@@ -6,4 +6,4 @@ def index(request):
     return render(request, "coins_web_app/home.html")
 
 def displayInfo(request):
-    return render(request, "coins_web_app/basic.html", {'displayInfo': ['for this I can say that','and that is all I have to say']})
+    return render(request, "coins_web_app/basic.html", {'displayInfo': ['This is an example on how to display info in the same page']})
