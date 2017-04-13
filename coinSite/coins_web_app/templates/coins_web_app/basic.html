@@ -1,9 +1,84 @@
-{% extends "coins_web_app/header.html" %}
+{% load staticfiles %}
 
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
 
-	{% for c in displayInfo  %}
-		<p>{{c}}</p>
-	{% endfor %}
+	<head>
+		<title>CoinCollectorApp_Proj5</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="{% static 'coins_web_app/css/bootstrap.min.css' %}" type = "text/css"/>
+		<!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"></link> -->
+		<meta name="viewport" content = "width=device-width, initial-scale=1.0">
 
-{% endblock %}
+		<!-- /*<style type="text/css">
+			html,
+			body {
+			  /*background-color: #0000;*/
+			  color: #0000FF;
+			  font-family: Arial;
+			  height:100%
+			}
+		</style>*/ -->
+
+	</head>
+		<hr>
+
+	<body class="body" style="background-color:#f6f6f6">
+		<div class="container-fluid" style="min-height:90%; ">
+			<div class="row">
+				  <div class="col-sm-10">
+					  <br>
+					  <center>
+					  	<h1>Welcome to the QUATER COINS web site!</h1>
+					  </center>
+				  </div>
+			</div>
+			<hr>
+			<div class="col-sm-2">
+				<div class='container-fluid'>
+					<form method="POST" action="{% url 'quarters_list' %}">
+						{% csrf_token %}
+						{{ form }}
+						<button type="submit">Add</button>
+					</form>
+				</div>
+			</div>
+			<div class="Silver value" style='margin-left:15px'>
+				<a href="http://cointrackers.com/silver-prices/" title="Silver Prices" target="_blank"><img src="http://cointrackers.com/img/30-silver.png" alt="Silver Prices" border="0"/></a>
+			</div>
+		</div>
+		<div>
+			<table class="tabel">
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		<!-- <div class='container-fluid'>
+				{% block content %}
+					{% for quarter in quarters_list %}
+					<table class="table">
+						<tr>{{ quarter.state }}</tr>
+					</table>
+
+					{% empty %}
+
+					<p>You have no quarters in your quarter list</p>
+
+					{% endfor %}
+				{% endblock %}
+		</div> -->
+	</body>
+
+	<footer>
+		<div class="container-fluid" style='margin-left:15px'>
+			<p><a href="https://en.wikipedia.org/wiki/50_State_Quarters" target="blank">WikipediaCoinSite</a></p>
+		</div>
+	</footer>
+
+</html>
