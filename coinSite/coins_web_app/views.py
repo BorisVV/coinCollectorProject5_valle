@@ -15,9 +15,9 @@ def quarters_list(request):
             return redirect('coins_web_app/basic.html')
 
     # If not a POST request.
-    quaters = DisplayQuaters.objects #.filter(orderby=number)
+    quaters = DisplayQuaters.objects.all() #.filter(orderby=number)
     form = NewQuatersForm()
-    return render(request, 'coins_web_app/basic.html', {'quarters' : quaters, 'form' : form})
+    return render(request, 'coins_web_app/basic.html', {'quarters_list' : quaters, 'form' : form})
 
 # def index(request):
 #     return render(request, "coins_web_app/basic.html")
