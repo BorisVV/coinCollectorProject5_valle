@@ -35,5 +35,6 @@ lat_lon_list.pop(0)
     # This creates the csv file and it creates it.
 with open('states_lat_lon.csv', 'w', encoding='utf-8') as latLonFile:
     writer = csv.writer(latLonFile)
+    writer.writerow(['name', 'latitud', 'longitud'])
         # Notice the writerows, it is used to add arrays to csv files.
     writer.writerows(lat_lon_list)
