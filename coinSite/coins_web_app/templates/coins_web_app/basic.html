@@ -10,7 +10,7 @@
 		<!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"></link> -->
 		<meta name="viewport" content = "width=device-width, initial-scale=1.0">
 
-		<!-- /*<style type="text/css">
+		<style type="text/css">
 			html,
 			body {
 			  /*background-color: #0000;*/
@@ -18,7 +18,7 @@
 			  font-family: Arial;
 			  height:100%
 			}
-		</style>*/ -->
+		</style>
 
 	</head>
 		<hr>
@@ -34,51 +34,57 @@
 				  </div>
 			</div>
 			<hr>
-			<div class="col-sm-2">
+			<div class="col-sm-12">
+				<div class='container-fluid'>
+					<div class="row">
+						<table class="table table-stripped">
+							<th class="col-xs-1">Number</th>
+							<th class="col-sm-1">State</th>
+							<th class="col-md-2">Release-date/Original-Date</th>
+							<th class="col-md-2">Elements</th>
+							<th class="col-md-2">Engraver</th>
+							<th class="col-md-2">Design</th>
+						</table>
+							{% block content %}
+							{% for quarter in quarters_list %}
+							<table class="table table-stripped">
+								<tr>
+									<td class="col-xs-1">{{ quarter.number }}</td>
+									<td class="col-sm-1">{{ quarter.state }}</td>
+									<td class="col-md-2">{{ quarter.release_date }}</td>
+									<td class="col-md-2">{{ quarter.elements }}</td>
+									<td class="col-md-2">{{ quarter.engraver }}</td>
+									<td class="col-md-2">{{ quarter.link|safe }}</td>
+								</tr>
+							</table>
+							{% empty %}
+
+							<p>You have no quarters in your quarter list</p>
+
+							{% endfor %}
+						{% endblock %}
+					</div>
+				</div>
+			</div>
+			<!-- <div class="col-sm-2">
 				<div class='container-fluid'>
 					<form method="POST" action="{% url 'quarters_list' %}">
 						{% csrf_token %}
 						{{ form }}
 						<button type="submit">Add</button>
 					</form>
+				</div> -->
+				<div class="Silver value" style='margin-left:15px'>
+					<a href="http://cointrackers.com/silver-prices/" title="Silver Prices" target="_blank"><img src="http://cointrackers.com/img/30-silver.png" alt="Silver Prices" border="0"/></a>
 				</div>
-			</div>
-			<div class="Silver value" style='margin-left:15px'>
-				<a href="http://cointrackers.com/silver-prices/" title="Silver Prices" target="_blank"><img src="http://cointrackers.com/img/30-silver.png" alt="Silver Prices" border="0"/></a>
-			</div>
-		</div>
-		<div>
-			<table class="tabel">
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-			</table>
-		</div>
-		<div class='container-fluid'>
-				{% block content %}
-					{% for quarter in quarters_list %}
-					<table class="table">
-						<tr>{{ quarter.state }}</tr>
-					</table>
-
-					{% empty %}
-
-					<p>You have no quarters in your quarter list</p>
-
-					{% endfor %}
-				{% endblock %}
+				<footer>
+					<div class="container-fluid" style='margin-left:15px'>
+						<p><a href="https://en.wikipedia.org/wiki/50_State_Quarters" target="blank">WikipediaCoinSite</a></p>
+					</div>
+				</footer>
+			<!-- </div> -->
 		</div>
 	</body>
 
-	<footer>
-		<div class="container-fluid" style='margin-left:15px'>
-			<p><a href="https://en.wikipedia.org/wiki/50_State_Quarters" target="blank">WikipediaCoinSite</a></p>
-		</div>
-	</footer>
 
 </html>
