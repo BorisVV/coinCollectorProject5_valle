@@ -4,8 +4,6 @@ venv/
 TODO
 TODO.txt
 __pycache__/
-*.jpg
-*.png
 img/
 media/images/
 *.db
