@@ -5,7 +5,6 @@ TODO
 TODO.txt
 __pycache__/
 img/
-media/images/
 *.db
-*csv
+*.csv
 *img/
