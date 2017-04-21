@@ -23,7 +23,7 @@ for row in table.find_all('tr')[1:]:
         img_link = cell.find_all('a', class_ = 'image')
         for link in img_link:
             # This global variable stores the link as string
-            img_link_str = (str(link))
+            img_link_str = (str(link).replace('<a class="image" href="/', '<a href="https://en.wikipedia.org/'))
 
         # if stament, some of the rows have eight and others 7 columns and this makes sure that
         #they match by removing the first column on the ones that have eight columns
@@ -44,5 +44,4 @@ for row in table.find_all('tr')[1:]:
     # Open the file and use encoding to format and write to file with the header in the write.row
 with open('quarterSoup.csv','w', encoding='utf-8') as outfile:
     writer=csv.writer(outfile)
-    writer.writerow(['Number', 'State', 'Release date', 'Elements', 'Engraver', 'Link'])
     writer.writerows(list_of_rows)
