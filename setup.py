@@ -1,14 +1,19 @@
-"""
-Create a virtual enviroment (venv)
+from setuptools import setup
 
-install django
+setup(
+    name='CoinCollectorApp_Proj5',
+    version='0.1',
+    packages=[
+        'coinCollectorApp_Proj5',
+        'coinSite'],
+    install_requires=[
+        "requests",
+        "psycopg2",],
 
-install bootstrap
+    author='Boris V',
 
-install beautifulSoup4
+    packages=find_packages(exclude=['tests*']),
 
-install requests
-
-install pillow (not sure if it will be needed)
-
-"""
+    long_description=open('README.md').read(),
+    # ...
+)
