@@ -8,12 +8,16 @@ Generate id, or is the table set up to autoincrement?
 import csv
 import sqlite3
 import os
+from bs4_scrapping_data import Bs4Scrapping as filePath
+
 class WriteToDB:
+    ''' This class is to transfer the csv data to the sql database'''
 
-    conn = sqlite3.connect('coinSite\db.sqlite3')
+    dbPath = os.path.join('coinCollectorApp', 'coinSite', 'db.sqlite3')
+    conn = sqlite3.connect(dbPath)
     c = conn.cursor()
-
-    with open('quarterSoup.csv', 'r') as f:
+        # Notice the filePath from the bs4_scrapping file that uses the var in the class.
+    with open(filePath.FILE_PATH, 'r') as f:
         reader = csv.reader(f)
 
         # This line of code is to make sure that list in the csv file doesn't contain empty

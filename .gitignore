@@ -8,3 +8,6 @@ img/
 *.db
 *.csv
 *img/
+*json
+maps/*.html
+hello_folium.py

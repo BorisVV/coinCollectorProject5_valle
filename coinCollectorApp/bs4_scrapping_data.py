@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import csv
+import os
 
 class Bs4Scrapping:
 
@@ -49,6 +50,7 @@ class Bs4Scrapping:
         main_list_with_all_data.append(list_of_cells)
 
         # Open the file and use encoding to format and write to file with the header in the write.row
-    with open('quarterSoup.csv','w', encoding='utf-8') as outfile:
+    FILE_PATH = os.path.join('coinCollectorApp', 'files', 'quarterSoup.csv')
+    with open(FILE_PATH, 'w', encoding='utf-8') as outfile:
         writer=csv.writer(outfile)
         writer.writerows(main_list_with_all_data)

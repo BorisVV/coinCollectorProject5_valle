@@ -13,6 +13,7 @@ setup(
         "django",
         "beautifulsoup4",
         "Jinja2",
+        "pandas",
         ],
 
     author='Boris V',
