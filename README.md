@@ -8,20 +8,23 @@
 # 	!Create a folder with anyName and inside that folder clone or fork the following,
 *  ---> https://github.com/BorisVV/coinCollectorProject5_valle
 
-# The following needs to be created outside the dirictory coinCollectorApp/ (inside your anyName folder)
-# pip freeze > requirements.txt
+* The following needs to be created outside the directory coinCollectorApp/ (inside your anyName folder)
+*	 pip freeze > requirements.txt
+*	 create a .gitignore file
+
 * create a virtualenv in your machine
-# $ virtualenv nameOFEnviromentHere (example venv)
+*	 $ virtualenv nameOFEnviromentHere
+*		(example --> $ virtualenv venv)
 
 --------------------------------------------------------------------------------
-# PIP INSTALL
-* django
-* requests
-* beautifulsoup4
-* Jinja2
-* psycopg2
-* folium
-* pandas
+# $ PIP INSTALL
+* 	django
+* 	requests
+* 	beautifulsoup4
+* 	Jinja2
+* 	psycopg2
+* 	folium
+* 	pandas
 
 ! Pillow is not required for this app but can be install with pip if needed.
 
@@ -31,19 +34,25 @@
 # Command lines and to RUN the APP (first time follow this instructions below).
 
 # First
-* 		from the dirictory coinCollectorApp/ run the following commands.
-* $ python coinSite/manage.py makemigrations (no spaces in makem...)
-* $ python coinSite/manage.py migrate
-! 		If you run into trouble, you might need to create a super user first.
-*		from the directory coinCollectorApp/
-		* $ python coinSite/manage.py createsuperuser (no spaces in createsu...)
-			* Enter username or leave default,
-			* Email is optional,
-			* Enter password. (write down this info as you will need it for Django admin access)
+* 	from the directory coinCollectorApp/ run the following commands.
+* 	$ python coinSite/manage.py makemigrations
+*		(no spaces in makemigrations)
+* 	$ python coinSite/manage.py migrate
+
+* !If you run into trouble, you might need to create a super user first.
+*	To create a superuser,
+*	from the directory coinCollectorApp/
+*		 $ python coinSite/manage.py createsuperuser
+*				(no spaces in createsuperuser)
+*			>> Enter username (or leave default)
+*			>> Email (optional)
+*			>> Enter password
+*			>> Re-enter password
+*	(write down the above info as you will need it for Django admin access)
 # Second
-* 		from the dirictory coinCollectorApp/ run the following commands.
-* $ run_app_manager.py  --> to load the data to db.sqlite3
-* $ python coinSite/manage.py runserver
+* from the dirictory coinCollectorApp/ run the following commands.
+* 	$ run_app_manager.py  --> to load the data to db.sqlite3
+* 	$ python coinSite/manage.py runserver
 
 --------------------------------------------------------------------------------
 #
