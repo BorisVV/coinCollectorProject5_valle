@@ -3,12 +3,17 @@ from setuptools import setup
 setup(
     name='CoinCollectorApp_Proj5',
     version='0.1',
+    python = 'python 3.6'
     packages=[
-        'coinCollectorApp_Proj5',
+        'coinCollectorApp',
         'coinSite'],
     install_requires=[
         "requests",
-        "psycopg2",],
+        "psycopg2",
+        "django",
+        "beautifulsoup4",
+        "Jinja2",
+        ],
 
     author='Boris V',
 
