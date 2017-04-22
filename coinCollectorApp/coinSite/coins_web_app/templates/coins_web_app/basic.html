@@ -3,88 +3,92 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<title>CoinCollectorApp_Proj5</title>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" href="{% static 'coins_web_app/css/bootstrap.min.css' %}" type = "text/css"/>
-		<!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"></link> -->
-		<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+<head>
+	<title>CoinCollectorApp_Proj5</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="{% static 'coins_web_app/css/bootstrap.min.css' %}" type = "text/css"/>
+	<!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"></link> -->
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
 
-		<style type="text/css">
-			html,
-			body {
-			  /*background-color: #0000;*/
-			  color: #0000FF;
-			  font-family: Arial;
-			  height:100%
-			}
-		</style>
+	<style type="text/css">
+		html,
+		body {
+		  background-color: #0000;
+		  color: #0000FF;
+		  font-family: Arial;
+		  height:100%
+		}
+		/* unvisited link */
+		a:link {
+		    color: pink;
+		}
+		/* mouse over link */
+		a:hover {
+		    color: green;
+		}
+		tr:hover {
+			color: black;
+		}
+	</style>
 
-	</head>
+</head>
 		<hr>
 
-	<body class="body" style="background-color:#f6f6f6">
-		<div class="container-fluid" style="min-height:90%; ">
+ <!-- style="background-color:#f6f6f6" -->
+<body class="body">
+<div class="container-fluid" style="min-height:90%; ">
+	<div class="row">
+		  <div class="col-sm-10">
+			  <br>
+			  <center>
+			  	<h1>Welcome to the QUATER COINS web site!</h1>
+			  </center>
+		  </div>
+	</div>
+	<hr>
+	<div class="col-sm-12">
+		<div class='container-fluid'>
 			<div class="row">
-				  <div class="col-sm-10">
-					  <br>
-					  <center>
-					  	<h1>Welcome to the QUATER COINS web site!</h1>
-					  </center>
-				  </div>
-			</div>
-			<hr>
-			<div class="col-sm-12">
-				<div class='container-fluid'>
-					<div class="row">
-						<table class="table table-stripped">
-							<th class="col-xs-1">Number</th>
-							<th class="col-sm-1">State</th>
-							<th class="col-md-2">Release-date/Original-Date</th>
-							<th class="col-md-2">Elements</th>
-							<th class="col-md-2">Engraver</th>
-							<th class="col-md-2">Design</th>
-						</table>
-							{% block content %}
-							{% for quarter in quarters_list %}
-							<table class="table table-stripped">
-								<tr>
-									<td class="col-xs-1">{{ quarter.number }}</td>
-									<td class="col-sm-1">{{ quarter.state }}</td>
-									<td class="col-md-2">{{ quarter.release_date }}</td>
-									<td class="col-md-2">{{ quarter.elements }}</td>
-									<td class="col-md-2">{{ quarter.engraver }}</td>
-									<td class="col-md-2">{{ quarter.link|safe }}</td>
-								</tr>
-							</table>
-							{% empty %}
+				<table class="table table-stripped">
+					<th class="col-xs-1">Number</th>
+					<th class="col-sm-1">State</th>
+					<th class="col-md-2">Release-date/Original-Date</th>
+					<th class="col-md-2">Elements</th>
+					<th class="col-md-2">Engraver</th>
+					<th class="col-md-2">Design</th>
+				</table>
+					{% block content %}
+					{% for quarter in quarters_list %}
+					<table class="table table-hover">
+						<tr>
+							<td class="col-xs-1">{{ quarter.number }}</td>
+							<td class="col-sm-1">{{ quarter.state }}</td>
+							<td class="col-md-2">{{ quarter.release_date }}</td>
+							<td class="col-md-2">{{ quarter.elements }}</td>
+							<td class="col-md-2">{{ quarter.engraver }}</td>
+							<td class="col-md-2">{{ quarter.link|safe }}</td>
+						</tr>
+					</table>
 
-							<p>You have no quarters in your quarter list</p>
+					{% empty %}
 
-							{% endfor %}
-						{% endblock %}
-					</div>
-				</div>
+					<p>You have no quarters in your quarter list</p>
+
+					{% endfor %}
+				{% endblock %}
 			</div>
-			<!-- <div class="col-sm-2">
-				<div class='container-fluid'>
-					<form method="POST" action="{% url 'quarters_list' %}">
-						{% csrf_token %}
-						{{ form }}
-						<button type="submit">Add</button>
-					</form>
-				</div> -->
-				<div class="Silver value" style='margin-left:15px'>
-					<a href="http://cointrackers.com/silver-prices/" title="Silver Prices" target="_blank"><img src="http://cointrackers.com/img/30-silver.png" alt="Silver Prices" border="0"/></a>
-				</div>
-				<footer>
-					<div class="container-fluid" style='margin-left:15px'>
-						<p><a href="https://en.wikipedia.org/wiki/50_State_Quarters" target="blank">WikipediaCoinSite</a></p>
-					</div>
-				</footer>
-			<!-- </div> -->
 		</div>
-	</body>
-
-
+	</div>
+</div>
+<footer>
+<div class="container-fluid" style='margin-left:15px'>
+	<h2>
+	<p><a href="https://en.wikipedia.org/wiki/50_State_Quarters" target="blank">
+	<center>
+		WikipediaCoinSite</a></p>
+	</center>
+	</h2>
+</div>
+</footer>
+</body>
 </html>
