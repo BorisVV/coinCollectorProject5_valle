@@ -13,7 +13,7 @@ from bs4_scrapping_data import Bs4Scrapping as filePath
 class WriteToDB:
     ''' This class is to transfer the csv data to the sql database'''
 
-    dbPath = os.path.join('coinCollectorApp', 'coinSite', 'db.sqlite3')
+    dbPath = os.path.join('coinSite', 'db.sqlite3')
     conn = sqlite3.connect(dbPath)
     c = conn.cursor()
         # Notice the filePath from the bs4_scrapping file that uses the var in the class.
@@ -29,7 +29,7 @@ class WriteToDB:
         to_db = [(i[0], i[1], i[2], i[3], i[4], i[5]) for i in clean_reader]
 
             # Insert a row of data
-        c.executemany('''INSERT INTO coins_web_app_displayquaters(number, state, release_date, elements, engraver, link) VALUES (?,?,?,?,?,?)''', to_db)
+        c.executemany('''INSERT INTO coins_web_app_displayquarters(number, state, release_date, elements, engraver, image_link) VALUES (?,?,?,?,?,?)''', to_db)
             # Save (commit) the changes
         conn.commit()
 

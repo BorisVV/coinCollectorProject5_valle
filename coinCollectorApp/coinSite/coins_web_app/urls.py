@@ -3,5 +3,5 @@ from . import views # local file
 
 urlpatterns = [
 # url(r'^$', views.index, name='index'),
-url(r'^', views.quarters_list, name='quarters_list'),
+url(r'^$', views.quarters_list, name='quarters_list'),
 ]

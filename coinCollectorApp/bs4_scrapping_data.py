@@ -50,7 +50,7 @@ class Bs4Scrapping:
         main_list_with_all_data.append(list_of_cells)
 
         # Open the file and use encoding to format and write to file with the header in the write.row
-    FILE_PATH = os.path.join('coinCollectorApp', 'files', 'quarterSoup.csv')
+    FILE_PATH = os.path.join('files', 'quarterSoup.csv')
     with open(FILE_PATH, 'w', encoding='utf-8') as outfile:
         writer=csv.writer(outfile)
         writer.writerows(main_list_with_all_data)

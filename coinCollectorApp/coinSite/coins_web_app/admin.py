@@ -1,5 +1,5 @@
 from django.contrib import admin
 
-from .models import DisplayQuaters
+from .models import DisplayQuarters
 
-admin.site.register(DisplayQuaters)
+admin.site.register(DisplayQuarters)

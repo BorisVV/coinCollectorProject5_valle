@@ -1,23 +1,24 @@
 from django.shortcuts import render, redirect, reverse, get_list_or_404
 from django.conf.urls import url
 from django.http import HttpResponse
-from .models import DisplayQuaters
-from .forms import NewQuatersForm
+from .models import DisplayQuarters
+from .forms import NewQuartersForm
+
+def index(request):
+    return render(request, "coins_web_app/quarters_list.html")
+
 
 def quarters_list(request):
 
     # If a POST request.
     if request.method == 'POST':
-        form = NewQuatersForm(request.POST)
-        newQuater = form.save()
+        form = NewQuartersForm(request.POST)
+        newQuarter = form.save()
         if form.is_valid():
-            newQuater.save()
+            newQuarter.save()
             return redirect('coins_web_app/basic.html')
 
     # If not a POST request.
-    quaters = DisplayQuaters.objects.all() #.filter(orderby=number)
-    form = NewQuatersForm()
-    return render(request, 'coins_web_app/basic.html', {'quarters_list' : quaters, 'form' : form})
-
-# def index(request):
-#     return render(request, "coins_web_app/basic.html")
+    quarters = DisplayQuarters.objects.all() #.filter(orderby=number)
+    form = NewQuartersForm()
+    return render(request, 'coins_web_app/basic.html', {'quarters_list' : quarters, 'form' : form})

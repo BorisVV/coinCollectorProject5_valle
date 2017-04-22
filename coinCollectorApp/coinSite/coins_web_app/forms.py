@@ -1,7 +1,7 @@
 from django import forms
-from .models import DisplayQuaters
+from .models import DisplayQuarters
 
-class NewQuatersForm(forms.ModelForm):
+class NewQuartersForm(forms.ModelForm):
     class Meta:
-        model = DisplayQuaters
-        fields = ('number', 'state', 'release_date', 'elements', 'engraver', 'link')
+        model = DisplayQuarters
+        fields = ('number', 'state', 'release_date', 'elements', 'engraver', 'image_link')
