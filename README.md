@@ -3,7 +3,7 @@
 * This app uses beautifulSoup4 for scrapping a table of quarter coins from
 	https://en.wikipedia.org/wiki/50_State_Quarters
 *	This information is then saved to a csv file which then is sent to the db where
-*	django pulls the data to be displayed as a table on a local host IP address (127.0.0.1:8000) website.
+*	Django pulls the data to be displayed as a table on a local host IP address (127.0.0.1:8000) website.
 --------------------------------------------------------------------------------
 # 	!Create a folder with anyName and inside that folder clone or fork the following,
 *  ---> https://github.com/BorisVV/coinCollectorProject5_valle
@@ -13,8 +13,8 @@
 *	 create a .gitignore file
 
 * create a virtualenv in your machine
-*	 $ virtualenv nameOFEnviromentHere
-*		(example --> $ virtualenv venv)
+*	 	$ virtualenv nameOFEnviromentHere
+*			(example --> $ virtualenv venv)
 
 --------------------------------------------------------------------------------
 # $ PIP INSTALL
@@ -35,24 +35,23 @@
 
 # First
 * 	from the directory coinCollectorApp/ run the following commands.
-* 	$ python coinSite/manage.py makemigrations
-*		(no spaces in makemigrations)
-* 	$ python coinSite/manage.py migrate
+* 		$ python coinSite/manage.py makemigrations
+*			(no spaces in makemigrations)
+* 		$ python coinSite/manage.py migrate
 
 * !If you run into trouble, you might need to create a super user first.
-*	To create a superuser,
+*	To create a superuser, NOTE - spaces in createsuperuser,
 *	from the directory coinCollectorApp/
-*		 $ python coinSite/manage.py createsuperuser
-*				(no spaces in createsuperuser)
-*			>> Enter username (or leave default)
-*			>> Email (optional)
-*			>> Enter password
-*			>> Re-enter password
+*		 	$ python coinSite/manage.py createsuperuser
+*			 	Enter username (or leave default)
+*				 	Email (optional)
+*			 	Enter password
+*			 	Re-enter password
 *	(write down the above info as you will need it for Django admin access)
 # Second
 * from the dirictory coinCollectorApp/ run the following commands.
-* 	$ run_app_manager.py  --> to load the data to db.sqlite3
-* 	$ python coinSite/manage.py runserver
+* 		$ run_app_manager.py  --> to load the data to db.sqlite3
+* 		$ python coinSite/manage.py runserver
 
 --------------------------------------------------------------------------------
 #
