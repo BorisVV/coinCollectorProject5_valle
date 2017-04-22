@@ -41,11 +41,11 @@
 * If you run into trouble, you might need to create a super user first.
 * To create a superuser, NOTE - spaces in createsuperuser,
 * from the directory coinCollectorApp/
-		 $ python coinSite/manage.py createsuperuser
-		 	Enter username (or leave default)
-			Email (optional)
-			Enter password
-			Re-enter password
+	 $ python coinSite/manage.py createsuperuser
+	 	Enter username (or leave default)
+	  	Email (optional)
+	 	Enter password
+		Re-enter password
 * (write down the above info as you will need it for Django admin access)
 
 # Second
