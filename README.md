@@ -19,8 +19,10 @@
 	and any other file that you don't want in github.com
 --------------------------------------------------------------------------------
 ## Create TWO FOLDERS inside the :file_folder: coinCollectorAPP/ :file_folder: name: files and :file_folder: name: maps
-*		Inside the files folder create a file with the name: **us_states_abbr.json**
-		  go to https://raw.githubusercontent.com/minneapolis-edu/mammoths/master/us_states_abbr.json copy all (control/command + a)(control/command + c) and paste () the data inside the **us_states_abbr.json**
+	https://raw.githubusercontent.com/minneapolis-edu/mammoths/master/us_states_abbr.json
+*	Inside the files folder create a file with the name: **us_states_abbr.json**
+	  Go to the above link and get the data for states abbr.
+	  Copy all (control/command + a)(control/command + c) and paste (contro/command + v) the data inside the **us_states_abbr.json**
 
 
 ## $ PIP INSTALL
