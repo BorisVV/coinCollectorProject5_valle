@@ -18,7 +18,10 @@
 * Create a .gitignore file and include the name of the virtualenv (venv) in it,
 	and any other file that you don't want in github.com
 --------------------------------------------------------------------------------
-## Create two folders inside the dir coinCollectorAPP/ :file_folder: files and :file_folder: maps
+## Create TWO FOLDERS inside the :file_folder: coinCollectorAPP/ :file_folder: name: files and :file_folder: name: maps
+*		Inside the files folder create a file with the name: **us_states_abbr.json**
+		  go to https://raw.githubusercontent.com/minneapolis-edu/mammoths/master/us_states_abbr.json copy all (control/command + a)(control/command + c) and paste () the data inside the **us_states_abbr.json**
+
 
 ## $ PIP INSTALL
 * 	django
@@ -36,7 +39,7 @@
 
 ## Command lines used to RUN the APP (first time, follow the instructions below).
 ## First
-* from the :file_folder: coinCollectorApp run the following commands.
+* from the :file_folder: coinCollectorApp/ run the following commands.
 *		$ python coinSite/manage.py makemigrations
 		  	(no spaces in makemigrations)
 	 	$ python coinSite/manage.py migrate
