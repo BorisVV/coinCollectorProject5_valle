@@ -1,13 +1,8 @@
-echo __pyc__
 *.pyc
-venv/
-TODO
-TODO.txt
 __pycache__/
-img/
+venv
 *.db
-*.csv
-*img/
-*json
-maps/*.html
+files/
+maps/
+TODO
 hello_folium.py
