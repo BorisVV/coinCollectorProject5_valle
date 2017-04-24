@@ -8,10 +8,12 @@
 *  ---> https://github.com/BorisVV/coinCollectorProject5_valle
 * The following files need to be created outside the :file_folder: coinCollectorApp/ (inside your anyName folder)
 *	 	$ pip freeze > requirements.txt
+		  (followed by:)
+*		$ pip install -r requirements.txt
 * create a virtualenv in your machine
 *	 	$ virtualenv nameOFEnviromentHere
 			(example --> $ virtualenv venv)
-* Create a .gitignore file and include the name of the virtualenv (venv) in it,
+* Create a **.gitignore** file and include the name of the virtualenv (venv) in it,
 	and any other file that you don't want in github.com
 
 ## Create TWO FOLDERS inside the :file_folder: coinCollectorAPP/ :file_folder: name: files and :file_folder: name: maps
@@ -49,7 +51,7 @@
 * (write down the above info as you will need it for Django admin access)
 ## Second
 * from the :file_folder: coinCollectorApp/ run the following commands.
-* 		$ run_app_manager.py  --> to load the data to db.sqlite3
+* 		$ python run_app_manager.py  --> to load the data to db.sqlite3
 			(-- You only need to run the above line of code once, or if you delete all the data")
  		$ python coinSite/manage.py runserver --> to lunch the local host web app
 
@@ -58,3 +60,5 @@
 # Screenshots of site!
 ![alt text](coinCollectorApp/screenshots/quaters_page.png "Screen shot of site")
 ![alt text](coinCollectorApp/screenshots/page.png "Smaller screen view")
+![alt text](coinCollectorApp/screenshots/choroMap1.png "Map1")
+![alt text](coinCollectorApp/screenshots/choroMap2.png "Map2")
