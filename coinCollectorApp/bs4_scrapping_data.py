@@ -53,5 +53,5 @@ class Bs4Scrapping:
     FILE_PATH = os.path.join('files', 'quarterSoup.csv')
     with open(FILE_PATH, 'w', encoding='utf-8') as outfile:
         writer=csv.writer(outfile)
-        writer.writerow('number,states,release date,Elements,Engraver,image_link')
+        writer.writerow(['number', 'states', 'release date', 'Elements', 'Engraver', 'image_link'])
         writer.writerows(main_list_with_all_data)

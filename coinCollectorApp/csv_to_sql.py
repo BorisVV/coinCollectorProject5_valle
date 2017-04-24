@@ -23,7 +23,6 @@ class WriteToDB:
         # This line of code is to make sure that list in the csv file doesn't contain empty
         # nested list or they'll get removed
         clean_reader = [x for x in reader if x != []]
-
             # This for loop, is necesary to get each item from each row.
             # Optional, the variable stores the data a list you can select which item you want.
         to_db = [(i[0], i[1], i[2], i[3], i[4], i[5]) for i in clean_reader]

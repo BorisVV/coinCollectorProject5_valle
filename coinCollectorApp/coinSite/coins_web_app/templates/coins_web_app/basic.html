@@ -13,15 +13,13 @@
 	<style type="text/css">
 		html,
 		body {
+			/*background-color: #f6f6f6;*/
 		  background-color: #0000;
 		  color: #0000FF;
 		  font-family: Arial;
 		  height:100%
 		}
-		/* unvisited link */
-		a:link {
-		    color: pink;
-		}
+		
 		/* mouse over link */
 		a:hover {
 		    color: green;
@@ -49,14 +47,6 @@
 	<div class="col-sm-12">
 		<div class='container-fluid'>
 			<div class="row">
-				<table class="table table-stripped">
-					<th class="col-xs-1">Number</th>
-					<th class="col-sm-1">State</th>
-					<th class="col-md-2">Release-date/Original-Date</th>
-					<th class="col-md-2">Elements</th>
-					<th class="col-md-2">Engraver</th>
-					<th class="col-md-2">Design</th>
-				</table>
 					{% block content %}
 					{% for quarter in quarters_list %}
 					<table class="table table-hover">
@@ -68,6 +58,7 @@
 							<td class="col-md-2">{{ quarter.engraver }}</td>
 							<td class="col-md-2">{{ quarter.image_link|safe }}</td>
 						</tr>
+						{{ ednif }}
 					</table>
 
 					{% empty %}
