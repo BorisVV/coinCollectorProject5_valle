@@ -19,7 +19,7 @@
 ## Create TWO FOLDERS inside the :file_folder: coinCollectorAPP/ :file_folder: name: files and :file_folder: name: maps
 *	https://raw.githubusercontent.com/minneapolis-edu/mammoths/master/us_states_abbr.json
 *	https://raw.githubusercontent.com/minneapolis-edu/mammoths/master/us_states.json
-*	Inside the files folder create **two files** with the names: **us_states_abbr.json** and
+*	Inside the :file_folder: **files folder** create **two files** (NO folders/directories) with the names: **us_states_abbr.json** and
 	  **us_states.json** and save the data.
 	  Go to the above links and get the data for us_states_abbr and us_states
 	  Copy all (control/command + a)(control/command + c) and paste (contro/command + v) the data inside the **us_states_abbr.json** and **us_states.json**
@@ -52,8 +52,11 @@
 ## Second
 * from the :file_folder: coinCollectorApp/ run the following commands.
 * 		$ python run_app_manager.py  --> to load the data to db.sqlite3
-			(-- You only need to run the above line of code once, or if you delete all the data")
- 		$ python coinSite/manage.py runserver --> to lunch the local host web app
+		  --> You only need to run the above line of code once, or if you delete/change data in the .csv file"
+ 		$ python coinSite/manage.py runserver
+		  --> to lunch the local host web app
+		$ python choro.py     
+		  --> to load the choroMap, and go to the :file_folder: maps and look for it in the file explorer folder in you computer. (.html extension)
 
 :smile: Learning new things is always cool! :smile:
 

@@ -20,5 +20,3 @@ if __name__ == "__main__":
     else:
         WriteToDB() # from csv_sql.py
         print('Data saved to the table in the db!')
-
-    Choro()
