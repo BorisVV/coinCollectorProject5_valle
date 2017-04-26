@@ -1,4 +1,4 @@
-#Manipulating images
+# Manipulating images
 
 from __future__ import print_function
 from PIL import Image, ImageFilter  # imports the library
