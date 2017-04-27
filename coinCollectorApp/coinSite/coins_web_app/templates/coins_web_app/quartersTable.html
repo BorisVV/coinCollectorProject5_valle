@@ -15,37 +15,35 @@
 		  </div>
 	</div>
 	<hr>
-	<div class="col-sm-14">
-		<div class='container-fluid'>
-			<div class="row">
-			<table class="table table-hover">
-				<tr>
-					<th class="col-xs-1">Number</th>
-					<th class="col-sm-1">State</th>
-					<th class="col-md-2">Released date</th>
-					<th class="col-md-2">Element</th>
-					<th class="col-md-2">Engraver</th>
-					<th class="col-md-2">Image Link</th>
-				</tr>
-			</table>
-			{% for quarter in quarters_list %}
-			<table class="table table-hover">
-				<tr>
-					<td class="col-xs-1">{{ quarter.number }}</td>
-					<td class="col-sm-1">{{ quarter.state }}</td>
-					<td class="col-md-2">{{ quarter.release_date }}</td>
-					<td class="col-md-2">{{ quarter.elements }}</td>
-					<td class="col-md-2">{{ quarter.engraver }}</td>
-					<td class="col-md-2">{{ quarter.image_link|safe }}</td>
-				</tr>
-			</table>
+	<div class='container-fluid'class="col-sm-10">
+		<!-- <div class="col-sm-14"> -->
+		<table class="table">
+			<tr>
+				<th class="col-sm-1">Number</th>
+				<th class="col-sm-1">State</th>
+				<th class="col-sm-2">Released date</th>
+				<th class="col-sm-2">Element</th>
+				<th class="col-sm-2">Engraver</th>
+				<th class="col-sm-2">Image Link</th>
+			</tr>
+		</table>
+		{% for quarter in quarters_list %}
+		<table class="table table-hover">
+			<tr class="quaters_table">
+				<td class="col-sm-1">{{ quarter.number }}</td>
+				<td class="col-sm-1">{{ quarter.state }}</td>
+				<td class="col-sm-2">{{ quarter.release_date }}</td>
+				<td class="col-sm-2">{{ quarter.elements }}</td>
+				<td class="col-sm-2">{{ quarter.engraver }}</td>
+				<td class="col-sm-2">{{ quarter.image_link|safe }}</td>
+			</tr>
+		</table>
 
-				{% empty %}
+			{% empty %}
 
-				<p>You have no quarters in your quarter list</p>
+			<p>You have no quarters in your quarter list</p>
 
-				{% endfor %}
-			</div>
+			{% endfor %}
 		</div>
 	</div>
 </div>

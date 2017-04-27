@@ -5,9 +5,12 @@
 <head>
 	<title>CoinCollectorApp_Proj5</title>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" href="{% static 'coins_web_app/css/bootstrap.min.css' %}" type = "text/css"/>
-	<!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"></link> -->
 	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'coins_web_app/css/bootstrap.min.css' %}" type = "text/css"/>
+	<link rel="stylesheet" href="{% static 'coins_web_app/css/style.css' %}"></link>
+    <link href="coins_web_app/css/my-styles.css" rel="stylesheet" media="screen">
+
+
 
 	<style type="text/css">
 		html,
@@ -20,12 +23,26 @@
 		  margin: 100%;
 		}
 
-		/* mouse over link */
-		a:hover {
-		    color: green;
-		}
-		tr:hover {
+		.quaters_table:hover {
 			color: black;
+		}
+		.mainPage:hover {
+		    width: 800px;
+		    height: 400px;
+		    position :relative;
+		    /*-webkit-animation: mymove 10s 1; /* Safari 4.0 - 8.0 */
+		    /*animation: mymove 10s 1;*/
+		}
+
+		/* Safari 4.0 - 8.0 */
+		@-webkit-keyframes mymove {
+		    100% {top: 75px;}
+		}
+
+		/* Standard syntax */
+		@keyframes mymove {
+		    100% {top: 75px;}
+			/*The @keyframes rule is not supported in Internet Explorer 9 and earlier versions.*/
 		}
 	</style>
 
@@ -46,8 +63,13 @@
 	<ul class="nav nav-pills">
   		<li role="presentation" class="active"><a href="{% url 'quarters_list' %}"
 		class="btn btn-default btn-xs">Go to Quater's Table</a>
+		<a href="static/coins_web_app/img/quarters_map.html"
+		class="btn btn-default btn-xs">Display Map</a>
 		</li>
 	</ul>
+	<br>
+	<img class = "mainPage" src="static/coins_web_app/img/GoldCoinUSMint.jpg">
+	<br>
 </div>
 </body>
 </html>

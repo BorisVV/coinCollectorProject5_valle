@@ -77,4 +77,8 @@ class QuartersChoro:
         legend_name = "States with quarters"
         )
     # Save the choroMap to a file inside the directory maps.
-    choromap.save('maps/quarters_map.html')
+    # choromap.save('maps/quarters_map.html') ## This is optional.
+    path_img = os.path.join('coinSite/coins_web_app/static/coins_web_app/img/quarters_map.html')
+    fid = open(path_img, 'wb') # This is to save a copy the map in ths css file.
+    choromap.save(fid) # File in dir.
+    fid.close()
