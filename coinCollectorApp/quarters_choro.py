@@ -6,7 +6,7 @@ from pathlib import Path
 class QuartersChoro:
     ''' Read data from the db and get columns that are needed for the pandas data
         frame. Read data from the .json file with states and load the abbr (example: AL)
-        and replace the state's full namme. 
+        and replace the state's full namme.
     '''
     # Create a path to find the link to the db(data base).
     dataBase_path = os.path.join('coinSite', 'db.sqlite3')

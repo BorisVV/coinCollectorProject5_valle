@@ -5,7 +5,7 @@ from .models import DisplayQuarters
 from .forms import NewQuartersForm
 
 def index(request):
-    return render(request, "coins_web_app/quarters_list.html")
+    return render(request, "coins_web_app/basic.html")
 
 
 def quarters_list(request):
@@ -16,9 +16,9 @@ def quarters_list(request):
         newQuarter = form.save()
         if form.is_valid():
             newQuarter.save()
-            return redirect('coins_web_app/basic.html')
+            return redirect('coins_web_app/quartersTable.html')
 
     # If not a POST request.
     quarters = DisplayQuarters.objects.all() #.filter(orderby=number)
     form = NewQuartersForm()
-    return render(request, 'coins_web_app/basic.html', {'quarters_list' : quarters, 'form' : form})
+    return render(request, 'coins_web_app/quartersTable.html', {'quarters_list' : quarters, 'form' : form})
