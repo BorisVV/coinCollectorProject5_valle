@@ -1,16 +1,18 @@
-{% load staticfiles %}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>CoinCollectorApp_Proj5</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="{% static 'coins_web_app/css/bootstrap.min.css' %}" type = "text/css"/>
-	<link rel="stylesheet" href="{% static 'coins_web_app/css/style.css' %}"></link>
-    <link href="coins_web_app/css/my-styles.css" rel="stylesheet" media="screen">
+	<!-- <link rel="stylesheet" href="{% static 'coins_web_app/css/style.css' %}"></link> -->
+    <!-- <link href="coins_web_app/css/my-styles.css" rel="stylesheet" media="screen"> -->
 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="icon" href="../../minnesotaCoin.png"> -->
 
+	<title>CoinCollectorApp_Proj5</title>
 
 	<style type="text/css">
 		html,
@@ -44,13 +46,12 @@
 		    100% {top: 75px;}
 			/*The @keyframes rule is not supported in Internet Explorer 9 and earlier versions.*/
 		}
+
+		.jumbotron{
+		    color: #a0965d;
+		}
 	</style>
-
 </head>
-
-{% block content %}
-
-{% endblock %}
 
 <body>
 <div class="container">
@@ -61,15 +62,27 @@
 	</h1>
 
 	<ul class="nav nav-pills">
-  		<li role="presentation" class="active"><a href="{% url 'quarters_list' %}"
-		class="btn btn-default btn-xs">Go to Quater's Table</a>
-		<a href="static/coins_web_app/img/quarters_map.html"
-		class="btn btn-default btn-xs">Display Map</a>
+  		<li role="presentation" class="active">
+			<a href="{% url 'quarters_list' %}" class="btn btn-default btn-xs">Go to Quater's Table</a>
+		</li>
+		<li role="presentation" class="active">
+			<a href="./static/coins_web_app/img/quarters_map.html" class="btn btn-default btn-xs">Display Map</a>
+		</li>
+		<li role="presentation" class="active">
+			<a href="/login" class="btn btn-default btn-xs">Login</a>
 		</li>
 	</ul>
 	<br>
+	{% block login %}
+
+	{% endblock %}
+
+	{% block content %}
+
+	{% endblock %}
+
 	<img class = "mainPage" src="static/coins_web_app/img/GoldCoinUSMint.jpg">
-	<br>
 </div>
 </body>
+
 </html>

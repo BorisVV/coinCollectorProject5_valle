@@ -1,4 +1,4 @@
-{% extends 'coins_web_app/basic.html' %}
+{% extends 'coins_web_app/base.html' %}
 
 {% block content %}
  <!-- style="background-color:#f6f6f6" -->
@@ -6,11 +6,11 @@
 	<div class="row">
 		  <div class="col-sm-10">
 			  <br>
+			  <li role="presentation" class="active"><a href="{% url 'home' %}"
+				  class="btn btn-default btn-xs">Return to Main Page</a>
+			  </li>
 			  <center>
-			  	<h1>Welcome to the QUARTER COINS web site!</h1>
-				<li role="presentation" class="active"><a href="{% url 'index' %}"
-				class="btn btn-default btn-xs">Return to Main Page</a>
-				</li>
+			  	<h1>HERE IS THE LIST!</h1>
 			  </center>
 		  </div>
 	</div>
@@ -53,6 +53,9 @@
 	<center>
 		WikipediaCoinSite</a></p>
 	</center>
+	<li role="presentation" class="active"><a href="{% url 'home' %}"
+	class="btn btn-default btn-xs">Return to Main Page</a>
+	</li>
 	</h2>
 </div>
 {% endblock %}

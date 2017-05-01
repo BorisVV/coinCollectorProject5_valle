@@ -25,6 +25,8 @@ SECRET_KEY = 'e0%4c#2cu6(#5a9lwkh90*4yxkbklbv5n1a6=q*^66-_*a*$d^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# SECURITY WARNING: don't run with debug turned on in production!
+
 ALLOWED_HOSTS = []
 
 
@@ -64,6 +66,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'debug': DEBUG,
         },
     },
 ]
